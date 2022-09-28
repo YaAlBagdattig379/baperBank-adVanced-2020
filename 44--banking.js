@@ -6,24 +6,37 @@ function inputField(inputId){
     depoInput.value = ' ';
     return depoInputNumber;
 } 
+
+function getInnerTextValue(fieldId){ // from 2 and 3 no. function 
+    const fieldText = document.getElementById(fieldId);
+    const fieldInnerText = fieldText.innerText;
+    const fieldValue = parseFloat(fieldInnerText);
+    return fieldValue;
+
+}
 // 2... total input value for depo and withdraw
 function totalInput(totalId,depoInputNumber){
-    const depoTotal = document.getElementById(totalId);
-    const depositTotalText = depoTotal.innerText;
-    const depositTotalNumber = parseFloat(depositTotalText);
-    depoTotal.innerText = depositTotalNumber + depoInputNumber;
+    // const depoTotal = document.getElementById(totalId);
+    // const depositTotalText = depoTotal.innerText;
+    // const depositTotalNumber = parseFloat(depositTotalText);
+    const depositTotalNumber = getInnerTextValue(totalId) ;
+    const newTotal = depositTotalNumber + depoInputNumber;
+    document.getElementById(totalId).innerText = newTotal;
+    return newTotal;
+    // depoTotal.innerText = depositTotalNumber + depoInputNumber;
 }
 // 3... active balance after depo or withdraw
 function activeBalance(depoInputNumber,isAdd){
-    const bankBalance = document.getElementById("balance-total");
-    const bankBalanceText = bankBalance.innerText;
-    const bankBalanceNumber = parseFloat(bankBalanceText);
+    // const bankBalance = document.getElementById("balance-total");
+    // const bankBalanceText = bankBalance.innerText;
+    // const bankBalanceNumber = parseFloat(bankBalanceText);
+    const bankBalanceNumber = getInnerTextValue("balance-total");
     exactBalance()
-    if(isAdd == true){
-        bankBalance.innerText = bankBalanceNumber + depoInputNumber;
+    if(isAdd == true &&  isAdd <= bankBalanceNumber){
+        document.getElementById("balance-total").innerText = bankBalanceNumber + depoInputNumber;
     }
     else{
-        bankBalance.innerText = bankBalanceNumber - depoInputNumber;
+        document.getElementById("balance-total").innerText = bankBalanceNumber - depoInputNumber;
     }
 }
 // 4,,,,,, when transaction by withdraw upto balance
