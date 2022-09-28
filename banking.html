@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banking</title>
+    <!-- tailwindcss link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="">   
+        <h1 class="text-center mt-5 font-semibold text-4xl
+        text-green-600">Let's Get Some <span class="text-red-500 ; text-3xl	text-4xl">Money</span> From <span class="text-yellow-500 ; text-3xl	text-4xl"> Bank</span></h1>
+    </header>
+    <main class=" w-3/4 mx-auto">
+        <!-- balance and transaction above part of banking page -->
+        <section>
+            <div class="grid grid-cols-3 gap-4  mt-6">
+                <div class="bg-blue-400	p-8 rounded text-white">
+                    <h3 class="text-3xl">Deposit</h3>
+                    <h4 class="text-5xl">$<span id="deposit-Total">00</span></h4>
+                </div>
+                <div class="bg-green-300 p-8 rounded text-white">
+                    <h3 class="text-3xl">Withdraw</h3>
+                    <h4 class="text-5xl">$<span id="withdraw-total">00</span></h4>
+                </div>
+                <div class="bg-yellow-300	p-8 rounded text-white">
+                    <h3 class="text-3xl">Balance</h3>
+                    <h4 class="text-5xl">$<span id="balance-total">400</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and withdraw beneath part of banking page-->
+        <section class=" mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100  p-8 rounded ">
+                    <h3 class="text-2xl">Please deposit</h3>
+                    <div class="">
+                        <input id="deposit-input" type="text" class="border-2 border-gray-400	rounded-md block px-3 w-3/4	mb-3 mt-3 	"id=""placeHolder="$ amont you want to deposit"> 
+                        <button id="deposit-button" class="bg-yellow-600 px-4 py-1 rounded-md text-white font-medium">deposit</button>
+                    </div>
+                </div>
+                <div class="bg-purple-100  p-8 rounded ">
+                    <h3 class="text-2xl">Please withdraw</h3>
+                    <div class="">
+                        <input id="withdraw-input" type="text" class="border-2 border-gray-400	rounded-md block px-3 w-3/4	mb-3 mt-3 "id="withdraw-input"placeHolder="$ amont you want to withdraw"> 
+                        <button id="withdraw-button"class="bg-yellow-600 px-4 py-1 rounded-md text-white font-medium">withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- js link for connecting with banking js -->
+ <!-- <script src="jsFolder/banking.js"></script> -->
+ <!-- <script src="banking-2.js"></script> -->
+ <!-- <script src="jsFolder/3-banking.js"></script> -->
+     <!-- 3rd practice like -->
+ <!-- <script src="jsFolder/33-bankingMor.js"></script> -->
+ <!-- 4rd practice link  -->
+ <script src="44--banking.js"></script>
+</body>
+</html>
